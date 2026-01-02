@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Custom Jewelry Order</title>
+
+<style>
+@font-face {
+    font-family: "Griffiths";
+    src: url("fonts/Griffiths.otf") format("opentype");
+}
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #84D2D5FF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    max-width: 600px;
+}
+.nav-container a {
+    font-family: "Griffiths";
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+/* FORM CONTAINER */
+.form-container {
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    /* ESTE es el marco azul */
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 14px;
+    width: 90%;
+    max-width: 1400px;
+    margin-top: 80px;
+}
+
+/* TÍTULO */
+h2 {
+    text-align: center;
+    color: #00313a;
+    margin-bottom: 40px;
+}
+
+/* FILAS */
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* CADA COLUMNA */
+.row div {
+    flex: 1;
+}
+
+/* INPUTS */
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #bfbfbf;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* TEXTAREA */
+textarea {
+    height: 180px;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+/* LABEL */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #00313a;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* FILE INPUT */
+input[type="file"] {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+/* BOTÓN */
+.submit-btn {
+    width: 100%;
+    background: #21b4c9;
+    border: none;
+    padding: 18px;
+    border-radius: 6px;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.submit-btn:hover { background: #1a9eaf; }
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="custom.html">Custom</a>
+    </div>
+</nav>
+
+<div class="form-container">
+    <h2>Custom Jewelry Order</h2>
+
+    <form action="https://formsubmit.co/josealbertofernandez33@gmail.com" method="POST" enctype="multipart/form-data">
+
+        <div class="row">
+            <div>
+                <label>Nombre *</label>
+                <input type="text" name="Nombre" required>
+            </div>
+
+            <div>
+                <label>Email *</label>
+                <input type="email" name="Email" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label>Ciudad *</label>
+                <input type="text" name="Ciudad" required>
+            </div>
+
+            <div>
+                <label>Presupuesto (€)</label>
+                <input type="number" name="Presupuesto">
+            </div>
+        </div>
+
+        <label>Describe tu idea *</label>
+        <textarea name="Idea" required></textarea>
+
+        <label>Adjuntar archivos (PDF o imágenes)</label>
+        <input type="file" name="Archivo" accept=".jpg,.png,.jpeg,.pdf">
+
+        <button type="submit" class="submit-btn">Enviar solicitud</button>
+    </form>
+</div>
+
+</body>
+</html>
