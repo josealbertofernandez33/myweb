@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Custom Jewelry Order</title>
+
+<!-- CARGA LA FUENTE GRIFFITHS -->
+<style>
+    @font-face {
+        font-family: "Griffiths";
+        src: url("fonts/Griffiths.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #84D2D5FF;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+    }
+
+    /* BOTÓN HOME */
+    .home-btn {
+        position: absolute;
+        top: 25px;
+        left: 35px;
+        color: white;
+        font-size: 26px;
+        font-family: "Griffiths";
+        text-decoration: none;
+        z-index: 10;
+    }
+
+    .form-container {
+        background: rgba(255, 255, 255, 0.7);
+        padding: 40px;
+        border-radius: 14px;
+        width: 90%;
+        max-width: 1400px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #00313a;
+        font-weight: bold;
+        font-size: 26px;
+    }
+
+    .row {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 25px;
+    }
+
+    .row div {
+        flex: 1;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #bfbfbf;
+        border-radius: 6px;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    textarea {
+        height: 180px;
+        resize: none;
+        margin-bottom: 30px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #00313a;
+    }
+
+    input[type="file"] {
+        background: white;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 25px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        background: #21b4c9;
+        border: none;
+        padding: 18px;
+        border-radius: 6px;
+        color: white;
+        font-size: 22px;
+        font-family: "Griffiths"; /* APLICAMOS LA FUENTE */
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .submit-btn:hover {
+        background: #1a9eaf;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- BOTÓN HOME -->
+<a href="home.html" class="home-btn">Home</a>
+
+<div class="form-container">
+    <h2>Custom Jewelry Order</h2>
+
+    <form action="https://formsubmit.co/josealbertofernandez33@gmail.com" method="POST" enctype="multipart/form-data">
+
+        <div class="row">
+            <div>
+                <label>Nombre *</label>
+                <input type="text" name="Nombre" required>
+            </div>
+
+            <div>
+                <label>Email *</label>
+                <input type="email" name="Email" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label>Ciudad *</label>
+                <input type="text" name="Ciudad" required>
+            </div>
+
+            <div>
+                <label>Presupuesto (€)</label>
+                <input type="number" name="Presupuesto">
+            </div>
+        </div>
+
+        <label>Describe tu idea *</label>
+        <textarea name="Idea" required></textarea>
+
+        <label>Adjuntar archivos (PDF o imágenes)</label>
+        <input type="file" name="Archivo" accept=".jpg,.png,.jpeg,.pdf">
+
+        <!-- FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="home.html">
+
+        <button type="submit" class="submit-btn">Enviar solicitud</button>
+    </form>
+</div>
+
+</body>
+</html>

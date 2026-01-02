@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home</title>
+
+<!-- Fuente Griffiths -->
+<style>
+@font-face {
+    font-family: 'Griffiths';
+    src: url('fonts/Griffiths.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Griffiths', serif;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover; /* ajusta la imagen a cualquier pantalla */
+}
+
+/* Contenedor de los botones arriba */
+nav {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* Botones */
+nav a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="custom.html">Custom</a>
+</nav>
+
+</body>
+</html>
